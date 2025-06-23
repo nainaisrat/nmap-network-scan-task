@@ -1,0 +1,77 @@
+┌──(kali㉿kali)-[~]
+└─$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:b8:ab:e6 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.9/24 brd 192.168.1.255 scope global dynamic noprefixroute eth0
+       valid_lft 451sec preferred_lft 451sec
+    inet6 fe80::225b:d4dc:daaf:dd74/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nmap -sS 192.168.1.9/24
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-06-23 08:25 EDT
+Nmap scan report for 192.168.1.1
+Host is up (0.00072s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE    SERVICE
+53/tcp filtered domain
+MAC Address: 52:54:00:12:35:00 (QEMU virtual NIC)
+
+Nmap scan report for 192.168.1.2
+Host is up (0.0016s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+1027/tcp open  IIS
+6106/tcp open  isdninfo
+MAC Address: 52:54:00:12:35:00 (QEMU virtual NIC)
+
+Nmap scan report for 192.168.1.3
+Host is up (0.00036s latency).
+All 1000 scanned ports on 192.168.1.3 are in ignored states.
+Not shown: 1000 filtered tcp ports (proto-unreach)
+MAC Address: 08:00:27:91:63:C6 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 192.168.1.9
+Host is up (0.0000060s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE
+21/tcp open  ftp
+22/tcp open  ssh
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 12.13 seconds
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ >....                                                                    
+Nmap scan report for 192.168.1.2
+Host is up (0.0016s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+445/tcp  open  microsoft-ds
+1027/tcp open  IIS
+6106/tcp open  isdninfo
+MAC Address: 52:54:00:12:35:00 (QEMU virtual NIC)
+
+Nmap scan report for 192.168.1.3
+Host is up (0.00036s latency).
+All 1000 scanned ports on 192.168.1.3 are in ignored states.
+Not shown: 1000 filtered tcp ports (proto-unreach)
+MAC Address: 08:00:27:91:63:C6 (PCS Systemtechnik/Oracle VirtualBox virtual NIC)
+
+Nmap scan report for 192.168.1.9
+Host is up (0.0000060s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE
+21/tcp open  ftp
+22/tcp open  ssh
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 12.13 seconds
+

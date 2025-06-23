@@ -8,7 +8,6 @@ Task 1: Scanning local network for open ports using Nmap
 - Found my local IP range.
 - Ran a TCP SYN scan using `nmap -sS 192.168.1.9/24`.
 - Noted down the IP addresses and open ports found.
-- (Optional) Used Wireshark to analyze packets.
 - Researched what services run on the open ports.
 - Identified potential security risks.
 
